@@ -1,7 +1,7 @@
 # 🌌 RONN — Digital Playground
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ronnanakibu/ronnanakibu/main/public/rony-portrait.png" width="160" height="200" style="border-radius: 12px; border: 1px solid rgba(124, 58, 237, 0.3);" alt="Rony Portrait" />
+  <img src="https://raw.githubusercontent.com/ronnanakibu/ronnanakibu/main/public/rony-portrait.png" width="160" height="160" style="border-radius: 12px; border: 1px solid rgba(124, 58, 237, 0.3);" alt="Rony Portrait" />
 </p>
 
 <h3 align="center">Rony Imanuel Sihombing</h3>
