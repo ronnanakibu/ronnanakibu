@@ -139,7 +139,7 @@ export default function SkillsOrbit() {
         </svg>
 
         {/* Style for line pulse animation */}
-        <style jsx global>{`
+        <style dangerouslySetInnerHTML={{ __html: `
           @keyframes pulseLine {
             to {
               stroke-dashoffset: 0;
@@ -153,7 +153,7 @@ export default function SkillsOrbit() {
               transform: translate(var(--float-x, 2px), var(--float-y, -3px));
             }
           }
-        `}</style>
+        ` }} />
 
         {/* Center Node (RONN) */}
         <div className="z-10 w-24 h-24 rounded-full bg-gradient-to-br from-bg-dark to-[#18181B] border-2 border-accent-primary flex flex-col items-center justify-center shadow-[0_0_35px_rgba(124,58,237,0.3)] relative">

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Lenis from "lenis";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowDown, Sparkles } from "lucide-react";
 
 // Local SVGs for Brand Icons
@@ -221,13 +221,13 @@ export default function Home() {
 
                 {/* Social media connections */}
                 <div className="flex space-x-5 mt-16 text-text-muted">
-                  <a href="https://instagram.com/ronn.sihombing" target="_blank" className="hover:text-accent-secondary transition clickable">
+                  <a href="https://instagram.com/ronnanakibu" target="_blank" className="hover:text-accent-secondary transition clickable">
                     <InstagramIcon className="w-5 h-5" />
                   </a>
-                  <a href="https://github.com/ronnsihombing" target="_blank" className="hover:text-accent-secondary transition clickable">
+                  <a href="https://github.com/ronnanakibu" target="_blank" className="hover:text-accent-secondary transition clickable">
                     <GithubIcon className="w-5 h-5" />
                   </a>
-                  <a href="https://linkedin.com/in/ronnsihombing" target="_blank" className="hover:text-accent-secondary transition clickable">
+                  <a href="https://linkedin.com/in/ronnanakibu" target="_blank" className="hover:text-accent-secondary transition clickable">
                     <LinkedinIcon className="w-5 h-5" />
                   </a>
                 </div>

@@ -80,21 +80,21 @@ export default function Terminal({ title, initialCommand = "whoami", autoExecute
         if (args.length === 0) {
           newLines.push(
             { text: "Social networks & touchpoints:", type: "output" },
-            { text: "  * instagram  - instagram.com/ronn.sihombing", type: "output" },
-            { text: "  * github     - github.com/ronnsihombing", type: "output" },
-            { text: "  * email      - ronn.sihombing@gmail.com", type: "output" },
-            { text: "  * linkedin   - linkedin.com/in/ronnsihombing", type: "output" },
+            { text: "  * instagram  - instagram.com/ronnanakibu", type: "output" },
+            { text: "  * github     - github.com/ronnanakibu", type: "output" },
+            { text: "  * email      - ronnanakibu@gmail.com", type: "output" },
+            { text: "  * linkedin   - linkedin.com/in/ronnanakibu", type: "output" },
             { text: "Type 'connect <platform>' (e.g. 'connect github') to visit profile.", type: "output" }
           );
         } else {
           const platform = args[0];
           const links: Record<string, string> = {
-            instagram: "https://instagram.com/ronn.sihombing",
-            github: "https://github.com/ronnsihombing",
-            email: "mailto:ronn.sihombing@gmail.com",
-            linkedin: "https://linkedin.com/in/ronnsihombing",
-            ig: "https://instagram.com/ronn.sihombing",
-            li: "https://linkedin.com/in/ronnsihombing"
+            instagram: "https://instagram.com/ronnanakibu",
+            github: "https://github.com/ronnanakibu",
+            email: "mailto:ronnanakibu@gmail.com",
+            linkedin: "https://linkedin.com/in/ronnanakibu",
+            ig: "https://instagram.com/ronnanakibu",
+            li: "https://linkedin.com/in/ronnanakibu"
           };
 
           if (links[platform]) {
