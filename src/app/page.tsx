@@ -366,7 +366,7 @@ export default function Home() {
                     {/* Grayscale Portrait Asset */}
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img 
-                      src="/rony-portrait-square.png" 
+                      src="/rony-portrait-zoom.png" 
                       alt="Rony Imanuel Sihombing Portrait"
                       className="w-full h-full object-cover grayscale brightness-[0.8] group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700 ease-out z-0"
                     />
