@@ -358,7 +358,7 @@ export default function Home() {
 
                 {/* Right Portrait Column */}
                 <div className="flex justify-center md:justify-end">
-                  <div className="w-[280px] h-[340px] md:w-[320px] md:h-[400px] rounded-2xl border border-white/10 overflow-hidden relative shadow-[0_0_30px_rgba(0,0,0,0.5)] group clickable">
+                  <div className="w-[280px] h-[280px] md:w-[300px] md:h-[300px] rounded-2xl border border-white/10 overflow-hidden relative shadow-[0_0_30px_rgba(0,0,0,0.5)] group clickable">
                     {/* Glowing ring overlay */}
                     <div className="absolute inset-0 border border-white/5 rounded-2xl pointer-events-none group-hover:border-accent-primary/30 transition-all duration-300 z-20" />
                     {/* Dark overlay shader */}
@@ -368,7 +368,7 @@ export default function Home() {
                     <img 
                       src="/rony-portrait-headshot.png" 
                       alt="Rony Imanuel Sihombing Portrait"
-                      className="w-full h-full object-cover grayscale brightness-[0.8] group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700 ease-out z-0"
+                      className="w-full h-full object-cover object-top grayscale brightness-[0.8] group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700 ease-out z-0"
                     />
                   </div>
                 </div>

@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full antialiased scroll-smooth"
+      className={`h-full antialiased scroll-smooth ${spaceGrotesk.variable} ${spaceMono.variable}`}
     >
-      <body className={`${spaceGrotesk.variable} ${spaceMono.variable} font-sans min-h-full bg-bg-dark text-text-main relative`}>
+      <body className="font-sans min-h-full bg-bg-dark text-text-main relative">
         <div className="noise-overlay" />
         {children}
       </body>

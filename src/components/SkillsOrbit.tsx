@@ -41,7 +41,7 @@ export default function SkillsOrbit() {
       icon: <Code className="w-5 h-5 text-accent-secondary" />,
       angle: 30, // bottom-right
       distance: 140,
-      tools: ["Next.js 15", "React", "TypeScript", "Node.js", "Python", "SQLite / Git"],
+      tools: ["JavaScript", "C++", "Python", "Java", "HTML/CSS", "Next.js", "React", "TypeScript", "Node.js", "SQLite"],
       color: "from-blue-400 to-[#00E5FF]",
     },
     {

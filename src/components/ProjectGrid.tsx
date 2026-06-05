@@ -157,10 +157,10 @@ export default function ProjectGrid() {
           // Asymmetrical grid column sizes based on index
           // 0 -> 7 cols, 1 -> 5 cols, 2 -> 5 cols, 3 -> 7 cols, etc.
           const colSpan = idx % 4 === 0 
-            ? "md:col-span-7 h-[260px] md:h-[300px]" 
+            ? "md:col-span-7 h-[260px] md:h-[380px]" 
             : idx % 4 === 3 
-            ? "md:col-span-7 h-[260px] md:h-[300px]" 
-            : "md:col-span-5 h-[260px] md:h-[300px]";
+            ? "md:col-span-7 h-[260px] md:h-[380px]" 
+            : "md:col-span-5 h-[260px] md:h-[380px]";
 
           return (
             <motion.div
