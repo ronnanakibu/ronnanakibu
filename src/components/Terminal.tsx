@@ -61,7 +61,7 @@ export default function Terminal({ title, initialCommand = "whoami", autoExecute
       case "skills":
         newLines.push(
           { text: "Core skills & tools:", type: "output" },
-          { text: "  [Code]    Next.js, React, Node.js, Python, TypeScript, SQLite", type: "output" },
+          { text: "  [Code]    JS, C++, Python, Java, HTML/CSS, Next.js, React, TypeScript, Node.js", type: "output" },
           { text: "  [Design]  Figma, Photoshop, Lightroom, Premiere Pro", type: "output" },
           { text: "  [Sys]     Custom ROM, Kernel Dev, Linux Administration", type: "output" }
         );
