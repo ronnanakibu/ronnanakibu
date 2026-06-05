@@ -124,6 +124,8 @@ export default function Terminal({ title, initialCommand = "whoami", autoExecute
     setHistory((prev) => [...prev, ...newLines]);
   };
 
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
   // Run initial command on mount with a simulated typing speed
   useEffect(() => {
     if (autoExecute && initialCommand) {
@@ -153,9 +155,11 @@ export default function Terminal({ title, initialCommand = "whoami", autoExecute
     }
   }, [initialCommand, autoExecute]);
 
-  // Scroll to bottom on history change
+  // Scroll only the internal terminal container, NOT the page window
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight;
+    }
   }, [history]);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -208,7 +212,10 @@ export default function Terminal({ title, initialCommand = "whoami", autoExecute
       </div>
 
       {/* Terminal Window Output Panel */}
-      <div className="p-4 h-[280px] overflow-y-auto space-y-2 relative">
+      <div 
+        ref={scrollContainerRef}
+        className="p-4 h-[280px] overflow-y-auto space-y-2 relative scroll-smooth"
+      >
         {history.map((line, idx) => {
           let colorClass = "text-text-main";
           if (line.type === "input") colorClass = "text-accent-secondary font-semibold";
@@ -246,7 +253,6 @@ export default function Terminal({ title, initialCommand = "whoami", autoExecute
             )}
           </span>
         </form>
-        <div ref={terminalEndRef} />
       </div>
 
       {/* Helper commands dock */}

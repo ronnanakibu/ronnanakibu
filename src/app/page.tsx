@@ -132,7 +132,7 @@ export default function Home() {
               </a>
 
               {/* Navigation Anchors Links */}
-              <nav className="hidden md:flex space-x-6 text-[10px] font-mono tracking-widest uppercase">
+              <nav className="hidden md:flex gap-6 text-[10px] font-mono tracking-widest uppercase">
                 {[
                   { id: "about", label: "About" },
                   { id: "journey", label: "Journey" },
