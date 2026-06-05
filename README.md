@@ -11,7 +11,6 @@
 
 <p align="center">
   <a href="https://instagram.com/ronn.sihombing"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-  <a href="https://linkedin.com/in/ronnsihombing"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:ronn.sihombing@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
@@ -29,13 +28,20 @@ This repository is **special** — it is the source code of my immersive Next.js
 
 ## 🚀 Skills Ecosystem
 
-### 💻 Development & Automation
+### ⚙️ Programming Languages
+![](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+
+### 💻 Frameworks & Libraries
 ![](https://img.shields.io/badge/Next.js_15-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
 ![](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
 ![](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 
 ### 🎨 Design & Multimedia
@@ -44,9 +50,8 @@ This repository is **special** — it is the source code of my immersive Next.js
 ![](https://img.shields.io/badge/Adobe_Photoshop-31A8FF?style=flat-square&logo=adobephotoshop&logoColor=white)
 ![](https://img.shields.io/badge/Premiere_Pro-9999FF?style=flat-square&logo=adobepremierepro&logoColor=white)
 ![](https://img.shields.io/badge/After_Effects-9999FF?style=flat-square&logo=adobeaftereffects&logoColor=white)
-![](https://img.shields.io/badge/DaVinci_Resolve-1A1A1A?style=flat-square&logo=davinciresolve&logoColor=white)
 
-### 🔧 Systems & Hacking
+### 🔧 Systems
 ![](https://img.shields.io/badge/Android_AOSP-3DDC84?style=flat-square&logo=android&logoColor=white)
 ![](https://img.shields.io/badge/Linux_Kernel-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![](https://img.shields.io/badge/Git_&_GitHub-F05032?style=flat-square&logo=git&logoColor=white)
