@@ -148,20 +148,12 @@ export default function ProjectGrid() {
         ))}
       </div>
 
-      {/* Projects Grid (Asymmetrical Apple-style layout) */}
+      {/* Projects Grid (Symmetrical Responsive Layout) */}
       <motion.div 
         layout
-        className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-6xl mx-auto px-4"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px] w-full"
       >
         {filteredProjects.map((p, idx) => {
-          // Asymmetrical grid column sizes based on index
-          // 0 -> 7 cols, 1 -> 5 cols, 2 -> 5 cols, 3 -> 7 cols, etc.
-          const colSpan = idx % 4 === 0 
-            ? "md:col-span-7 h-[260px] md:h-[380px]" 
-            : idx % 4 === 3 
-            ? "md:col-span-7 h-[260px] md:h-[380px]" 
-            : "md:col-span-5 h-[260px] md:h-[380px]";
-
           return (
             <motion.div
               layout
@@ -170,7 +162,7 @@ export default function ProjectGrid() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               key={p.id}
-              className={`${colSpan} relative rounded-xl overflow-hidden glass-panel border border-white/5 cursor-pointer flex flex-col justify-end p-6 group transition-all duration-300`}
+              className="relative aspect-[16/10] w-full rounded-xl overflow-hidden glass-panel border border-white/5 cursor-pointer flex flex-col justify-end p-6 group transition-all duration-300"
               ref={(el) => { cardRefs.current[p.id] = el; }}
               onMouseMove={(e) => handleMouseMove(e, p.id)}
               onMouseLeave={() => handleMouseLeave(p.id)}
@@ -190,11 +182,11 @@ export default function ProjectGrid() {
 
               {/* Card content text */}
               <div className="relative z-10 flex flex-col items-start w-full">
-                <span className="text-[10px] font-mono text-accent-secondary tracking-wider uppercase bg-accent-secondary/10 px-2 py-0.5 rounded-full mb-2 border border-accent-secondary/15">
+                <span className="text-[14px] font-mono text-accent-secondary tracking-wider uppercase bg-accent-secondary/10 px-2.5 py-0.5 rounded-full mb-3 border border-accent-secondary/15">
                   {p.categoryLabel}
                 </span>
                 
-                <h3 className="text-text-main font-sans font-bold text-lg md:text-xl tracking-wide flex items-center space-x-2 group-hover:text-accent-secondary transition-colors duration-200">
+                <h3 className="text-text-main font-sans font-bold text-[24px] tracking-wide flex items-center space-x-2 group-hover:text-accent-secondary transition-colors duration-200 leading-snug">
                   <span>{p.title}</span>
                   {p.hasPlayIcon && (
                     <span className="inline-block w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-white scale-90 group-hover:bg-accent-primary transition-all duration-200">
@@ -203,7 +195,7 @@ export default function ProjectGrid() {
                   )}
                 </h3>
                 
-                <p className="text-text-muted text-xs md:text-sm font-mono mt-1 max-w-[90%] truncate">
+                <p className="text-text-muted text-[16px] font-sans mt-2 max-w-[95%] truncate leading-normal">
                   {p.desc}
                 </p>
               </div>

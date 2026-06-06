@@ -96,7 +96,7 @@ export default function ExperimentLab() {
 
   return (
     <div className="w-full py-8 select-none">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px] w-full">
         {entries.map((entry, idx) => (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -104,42 +104,42 @@ export default function ExperimentLab() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.08 }}
             key={entry.id}
-            className="glass-card rounded-xl p-6 relative border border-white/5 flex flex-col justify-between group overflow-hidden"
+            className="glass-card rounded-xl p-8 relative border border-white/5 flex flex-col justify-between group overflow-hidden h-full"
           >
             {/* Tech grid mesh backdrop */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
 
             <div>
               {/* Header Status & Icon */}
-              <div className="flex justify-between items-start mb-4">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center">
+              <div className="flex justify-between items-start mb-6">
+                <div className="w-12 h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center">
                   {entry.icon}
                 </div>
-                <span className={`text-[9px] font-mono px-2 py-0.5 rounded border ${getStatusColor(entry.status)}`}>
+                <span className={`text-[14px] font-mono px-2.5 py-0.5 rounded border ${getStatusColor(entry.status)}`}>
                   {entry.statusLabel}
                 </span>
               </div>
 
               {/* Title & Description */}
-              <span className="text-[10px] font-mono text-text-muted uppercase tracking-wider block mb-1">
+              <span className="text-[14px] font-mono text-text-muted uppercase tracking-wider block mb-1">
                 {entry.category}
               </span>
-              <h4 className="text-text-main font-bold font-sans text-base mb-2 group-hover:text-accent-secondary transition-colors duration-200">
+              <h4 className="text-text-main font-bold font-sans text-[24px] mb-3 group-hover:text-accent-secondary transition-colors duration-200 leading-snug">
                 {entry.title}
               </h4>
-              <p className="text-text-muted text-xs font-mono leading-relaxed mb-6">
+              <p className="text-text-muted text-[16px] font-sans leading-relaxed mb-6">
                 {entry.desc}
               </p>
             </div>
 
             {/* Tech Stack tags */}
             <div>
-              <div className="w-full h-[1px] bg-white/5 mb-4" />
+              <div className="w-full h-[1px] bg-white/5 mb-6" />
               <div className="flex flex-wrap gap-1.5">
                 {entry.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-2 py-0.5 rounded bg-white/5 text-[9px] text-text-main/80 font-mono border border-white/5"
+                    className="px-2.5 py-0.5 rounded bg-white/5 text-[14px] text-text-main/80 font-mono border border-white/5"
                   >
                     {tech}
                   </span>

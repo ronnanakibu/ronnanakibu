@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Space_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const spaceMono = Space_Mono({
-  variable: "--font-space-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -20,6 +19,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Rony Imanuel Sihombing" }],
 };
 
+import SmoothScroll from "@/components/layout/SmoothScroll";
+import CustomCursor from "@/components/layout/CustomCursor";
+import Environment from "@/components/canvas/Environment";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,13 +31,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased scroll-smooth ${spaceGrotesk.variable} ${spaceMono.variable}`}
+      className={`h-full antialiased scroll-smooth ${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="font-sans min-h-full bg-bg-dark text-text-main relative">
+      <head>
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet" />
+      </head>
+      <body className="font-sans min-h-full bg-bg-dark text-text-main relative cursor-none">
+        <Environment />
         <div className="noise-overlay" />
-        {children}
+        <CustomCursor />
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );
 }
-

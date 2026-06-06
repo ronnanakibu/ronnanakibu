@@ -41,13 +41,13 @@ export default function Loader({ onComplete }: LoaderProps) {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ 
-            y: "-100vh",
-            transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } 
+            opacity: 0,
+            transition: { duration: 1.2, ease: [0.76, 0, 0.24, 1] } 
           }}
           className="fixed inset-0 bg-bg-dark z-[99999] flex items-center justify-center overflow-hidden"
           onAnimationComplete={(definition) => {
             // Wait for exit transition to complete before unmounting
-            if (definition && (definition as { y?: string }).y === "-100vh") {
+            if (definition && (definition as { opacity?: number }).opacity === 0) {
               onComplete();
             }
           }}
@@ -61,40 +61,24 @@ export default function Loader({ onComplete }: LoaderProps) {
             <AnimatePresence mode="wait">
               <motion.h1
                 key={WORDS[index]}
-                initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+                initial={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
                 animate={{ 
                   opacity: 1, 
-                  y: 0, 
                   filter: "blur(0px)",
-                  transition: { duration: 0.35, ease: "easeOut" }
+                  scale: 1,
+                  transition: { duration: 0.6, ease: "easeOut" }
                 }}
                 exit={{ 
                   opacity: 0, 
-                  y: -30, 
-                  filter: "blur(8px)",
-                  transition: { duration: 0.25, ease: "easeIn" }
+                  filter: "blur(10px)",
+                  scale: 1.05,
+                  transition: { duration: 0.4, ease: "easeIn" }
                 }}
-                className={`text-5xl md:text-7xl font-bold tracking-wider font-sans select-none ${
-                  index === 0
-                    ? "bg-clip-text text-transparent bg-gradient-to-r from-text-main via-accent-primary to-accent-secondary"
-                    : index === WORDS.length - 1
-                    ? "text-accent-success"
-                    : "text-text-main"
-                }`}
+                className={`text-5xl md:text-7xl font-bold tracking-wider font-sans select-none text-white`}
               >
                 {WORDS[index]}
               </motion.h1>
             </AnimatePresence>
-
-            {/* Cinematic subtitle progress bar */}
-            <div className="w-48 h-[1px] bg-white/10 mx-auto mt-6 relative overflow-hidden">
-              <motion.div
-                initial={{ width: "0%" }}
-                animate={{ width: `${((index + 1) / WORDS.length) * 100}%` }}
-                transition={{ duration: 0.3 }}
-                className="absolute top-0 left-0 h-full bg-gradient-to-r from-accent-primary to-accent-secondary"
-              />
-            </div>
           </div>
         </motion.div>
       )}

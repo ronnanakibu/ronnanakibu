@@ -128,8 +128,8 @@ export default function PhotoGallery() {
         ))}
       </div>
 
-      {/* Photography Masonry-like Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+      {/* Photography Responsive Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px] w-full">
         <AnimatePresence mode="popLayout">
           {filteredPhotos.map((p, idx) => (
             <motion.div
@@ -140,36 +140,36 @@ export default function PhotoGallery() {
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               key={p.id}
               onClick={() => setSelectedPhoto(p)}
-              className="relative aspect-[4/3] rounded-xl overflow-hidden glass-panel border border-white/5 cursor-pointer group flex flex-col justify-between p-5"
+              className="relative aspect-[16/10] w-full rounded-xl overflow-hidden glass-panel border border-white/5 cursor-pointer group flex flex-col justify-end p-6"
             >
               {/* Photo Stylized Gradient Background Layer representing composition depth */}
               <div className={`absolute inset-0 bg-gradient-to-tr ${p.visualGradient} scale-100 group-hover:scale-105 transition-transform duration-700 ease-out`} />
               
               {/* Overlay shading to blend details */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/20 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/10 pointer-events-none" />
 
               {/* Photo framing layout border */}
-              <div className="absolute inset-2 border border-white/5 pointer-events-none rounded-lg group-hover:border-white/20 transition-all duration-300" />
+              <div className="absolute inset-2.5 border border-white/5 pointer-events-none rounded-lg group-hover:border-white/20 transition-all duration-300" />
 
               {/* Top Action Hover Icons */}
-              <div className="relative z-10 flex justify-between items-start w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-[9px] font-mono text-white/50 bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">
+              <div className="relative z-10 flex justify-between items-start w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-auto">
+                <span className="text-[12px] font-mono text-white/50 bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">
                   EXIF READY
                 </span>
                 <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm hover:bg-white/20 transition">
-                  <Search className="w-3 h-3 text-white" />
+                  <Search className="w-3.5 h-3.5 text-white" />
                 </span>
               </div>
 
               {/* Bottom Metadata Preview */}
               <div className="relative z-10 w-full text-left">
-                <span className="text-[9px] font-mono text-accent-secondary uppercase font-bold tracking-wider mb-1 block">
-                  {p.location.split(",")[1] || p.location}
+                <span className="text-[14px] font-mono text-accent-secondary uppercase font-bold tracking-wider mb-1 block leading-none">
+                  {p.location.split(",")[1]?.trim() || p.location}
                 </span>
-                <h4 className="text-text-main font-sans font-bold text-base leading-snug group-hover:text-accent-secondary transition-colors duration-200">
+                <h4 className="text-text-main font-sans font-bold text-[24px] leading-snug group-hover:text-accent-secondary transition-colors duration-200">
                   {p.title}
                 </h4>
-                <div className="flex items-center space-x-2 text-[10px] text-text-muted font-mono mt-1">
+                <div className="flex items-center space-x-2 text-[14px] text-text-muted font-mono mt-1.5 leading-none">
                   <span className="truncate">{p.camera}</span>
                   <span>•</span>
                   <span>{p.year}</span>

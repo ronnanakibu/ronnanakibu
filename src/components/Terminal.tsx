@@ -198,23 +198,23 @@ export default function Terminal({ title, initialCommand = "whoami", autoExecute
   return (
     <div 
       onClick={handleContainerClick}
-      className="glass-panel w-full rounded-xl overflow-hidden font-mono text-sm shadow-2xl border border-white/10 text-left transition-all duration-300 relative select-text cursor-text"
+      className="glass-panel w-full rounded-2xl overflow-hidden font-mono text-[14px] shadow-2xl border border-white/10 text-left transition-all duration-300 relative select-text cursor-text"
     >
       {/* Terminal Title Bar */}
-      <div className="bg-surface-dark px-4 py-3 border-b border-white/5 flex items-center justify-between">
+      <div className="bg-surface-dark px-6 py-4 border-b border-white/5 flex items-center justify-between">
         <div className="flex space-x-2">
-          <span className="w-3 h-3 rounded-full bg-red-500/80 block" />
-          <span className="w-3 h-3 rounded-full bg-yellow-500/80 block" />
-          <span className="w-3 h-3 rounded-full bg-green-500/80 block" />
+          <span className="w-3.5 h-3.5 rounded-full bg-red-500/80 block" />
+          <span className="w-3.5 h-3.5 rounded-full bg-yellow-500/80 block" />
+          <span className="w-3.5 h-3.5 rounded-full bg-green-500/80 block" />
         </div>
-        <div className="text-text-muted text-xs select-none">{title}</div>
+        <div className="text-text-muted text-xs select-none tracking-wide">{title}</div>
         <div className="w-12" /> {/* spacer to center title */}
       </div>
 
       {/* Terminal Window Output Panel */}
       <div 
         ref={scrollContainerRef}
-        className="p-4 h-[280px] overflow-y-auto space-y-2 relative scroll-smooth"
+        className="p-6 md:p-8 h-[340px] overflow-y-auto space-y-3 relative scroll-smooth text-[14px]"
       >
         {history.map((line, idx) => {
           let colorClass = "text-text-main";
@@ -256,35 +256,35 @@ export default function Terminal({ title, initialCommand = "whoami", autoExecute
       </div>
 
       {/* Helper commands dock */}
-      <div className="bg-surface-dark/40 px-4 py-2 border-t border-white/5 flex flex-wrap gap-2 items-center text-[11px] text-text-muted select-none">
-        <span className="font-semibold text-accent-primary">Quick Exec:</span>
+      <div className="bg-surface-dark/40 px-6 py-3 border-t border-white/5 flex flex-wrap gap-2.5 items-center text-[12px] text-text-muted select-none">
+        <span className="font-semibold text-accent-primary mr-1">Quick Exec:</span>
         <button 
           onClick={(e) => { e.stopPropagation(); triggerExternalCommand("whoami"); }}
-          className="px-2 py-0.5 rounded bg-white/5 hover:bg-accent-primary hover:text-white transition duration-200 cursor-pointer"
+          className="px-3 py-1 rounded bg-white/5 hover:bg-accent-primary hover:text-white transition duration-200 cursor-pointer"
         >
           whoami
         </button>
         <button 
           onClick={(e) => { e.stopPropagation(); triggerExternalCommand("skills"); }}
-          className="px-2 py-0.5 rounded bg-white/5 hover:bg-accent-primary hover:text-white transition duration-200 cursor-pointer"
+          className="px-3 py-1 rounded bg-white/5 hover:bg-accent-primary hover:text-white transition duration-200 cursor-pointer"
         >
           skills
         </button>
         <button 
           onClick={(e) => { e.stopPropagation(); triggerExternalCommand("projects"); }}
-          className="px-2 py-0.5 rounded bg-white/5 hover:bg-accent-primary hover:text-white transition duration-200 cursor-pointer"
+          className="px-3 py-1 rounded bg-white/5 hover:bg-accent-primary hover:text-white transition duration-200 cursor-pointer"
         >
           projects
         </button>
         <button 
           onClick={(e) => { e.stopPropagation(); triggerExternalCommand("connect"); }}
-          className="px-2 py-0.5 rounded bg-white/5 hover:bg-accent-primary hover:text-white transition duration-200 cursor-pointer"
+          className="px-3 py-1 rounded bg-white/5 hover:bg-accent-primary hover:text-white transition duration-200 cursor-pointer"
         >
           connect
         </button>
         <button 
           onClick={(e) => { e.stopPropagation(); triggerExternalCommand("clear"); }}
-          className="px-2 py-0.5 rounded bg-white/5 hover:bg-red-500/20 hover:text-red-300 transition duration-200 cursor-pointer ml-auto"
+          className="px-3 py-1 rounded bg-white/5 hover:bg-red-500/20 hover:text-red-300 transition duration-200 cursor-pointer ml-auto"
         >
           clear
         </button>
